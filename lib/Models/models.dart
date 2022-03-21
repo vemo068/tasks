@@ -54,3 +54,8 @@ List<Category> categories = [
   Category(name: "Cat4", background: Color(0xffa3fc9c)),
   Category(name: "Cat5", background: Color(0xfffdbe9d)),
 ];
+enum TaskType { onTime, periodic }
+enum PeriodType { daily, weekly, monthly }
+
+
+var days = ['sat', 'mon', 'thi', 'wed'];
