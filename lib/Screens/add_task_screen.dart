@@ -193,7 +193,8 @@ class _OnetimeOrPeriodicState extends State<OnetimeOrPeriodic> {
           ],
         ),
         AnimatedContainer(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+          decoration: BoxDecoration(
+              color: Colors.grey[200], borderRadius: BorderRadius.circular(12)),
           padding: EdgeInsets.all(12),
           duration: Duration(milliseconds: 200),
           width: double.infinity,
@@ -319,7 +320,6 @@ class _ListDialogState extends State<ListDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      
       content: SizedBox(
         width: 300,
         height: 300,
