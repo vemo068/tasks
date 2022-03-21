@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_app/Styles/colors.dart';
 
 import '../Components/cat_slot.dart';
 import '../Components/tsk_txtfield.dart';
@@ -16,7 +17,7 @@ class AddTaskScreen extends StatelessWidget {
       bottomNavigationBar: MaterialButton(
         height: 65,
         minWidth: double.infinity,
-        color: Color(0xff135BFF),
+        color: kcAccentColor,
         onPressed: () {},
         child: Text(
           'Create',
@@ -318,19 +319,23 @@ class _ListDialogState extends State<ListDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      actions: [],
-      content: ListView.builder(
-        itemCount: widget.list.length,
-        itemBuilder: (context, index) {
-          return CheckboxListTile(
-              title: Text(listt[index].toString()),
-              value: check,
-              onChanged: (ischeck) {
-                setState(() {
-                  check = ischeck;
+      
+      content: SizedBox(
+        width: 300,
+        height: 300,
+        child: ListView.builder(
+          itemCount: widget.list.length,
+          itemBuilder: (context, index) {
+            return CheckboxListTile(
+                title: Text(listt[index].toString()),
+                value: check,
+                onChanged: (ischeck) {
+                  setState(() {
+                    check = ischeck;
+                  });
                 });
-              });
-        },
+          },
+        ),
       ),
     );
   }
